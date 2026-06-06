@@ -3,23 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <meta name="description" content="Marikuna — a little love page for Mari 💖">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Marikuna 💖</title>
-
-    <style>
-       
-    </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Marikuna 💖</h1>
-        <p>marikuna miyvarxar</p>
+    <div class="hearts-bg" aria-hidden="true"></div>
+    <div class="sparkles" aria-hidden="true"></div>
+    <canvas id="confetti" aria-hidden="true"></canvas>
 
-        <button onclick="window.location.href='indexi.html'">
-            Love
-        </button>
-    </div>
+    <main class="page">
 
+        <!-- HERO -->
+        <section class="card hero">
+            <div class="heart-pulse">💖</div>
+            <div class="couple-badge">💑 Ika + Mari</div>
+            <h1>Marikuna</h1>
+            <p class="subtitle">marikuna miyvarxar</p>
+            <p class="tagline">You are my favorite person in the whole universe ✨</p>
+
+            <div class="love-quote">
+                <span class="quote-icon">💕</span>
+                <p id="quote">Every moment with you feels like a little miracle.</p>
+            </div>
+        </section>
+
+        <!-- HEARTS -->
+        <section class="card hearts-section">
+            <h2>Tap a heart</h2>
+            <p class="intro">i am a good boy and i will do whatever you say 💖</p>
+
+            <div class="buttons">
+                <button class="heart-btn heart1" data-msg="I miss you so much 💖" data-color="#ff2b6b" aria-label="I miss you"></button>
+                <button class="heart-btn heart2" data-msg="I love you more than words can say ❤️" data-color="#2ecc71" aria-label="I love you"></button>
+                <button class="heart-btn heart3" data-msg="You are the sweetest good boy ever 🥺💕" data-color="#9b59b6" aria-label="Good boy"></button>
+                <button class="heart-btn heart4" data-msg="You are the most beautiful soul I know 🌸" data-color="#ff9f43" aria-label="You are beautiful"></button>
+                <button class="heart-btn heart5" data-msg="Forever yours. Always. No question. 💍" data-color="#00cec9" aria-label="Forever"></button>
+            </div>
+
+            <div class="message" id="message">Tap a heart above… 💕</div>
+
+            <button class="surprise-btn" id="surprise-btn">✨ Surprise Me With Love ✨</button>
+        </section>
+
+        <!-- REASONS -->
+        <section class="card reasons">
+            <h2>Why I adore you</h2>
+            <ul>
+                <li>Your smile lights up my whole world ☀️</li>
+                <li>You make me feel safe and loved 🫶</li>
+                <li>Every laugh with you is my favorite sound 😄</li>
+                <li>You are my home, no matter where we are 🏡</li>
+            </ul>
+        </section>
+
+        <!-- VIDEO -->
+        <section class="card video-section">
+            <h2>Our special moment 🎬</h2>
+            <p class="video-note">A little video, just for you — tap play for sound 🔊</p>
+
+            <div class="video-wrap">
+                <video id="love-video" class="hidden" controls playsinline preload="auto">
+                    <source src="assets/videos/love.mp4" type="video/mp4">
+                    Your browser does not support this video.
+                </video>
+                <div class="video-placeholder" id="video-placeholder">
+                    <span class="placeholder-icon">🎥</span>
+                    <p>Video coming soon…</p>
+                    <small>Add your file to <code>assets/videos/love.mp4</code></small>
+                </div>
+            </div>
+        </section>
+
+        <p class="footer-note">made with endless love, just for you 🌸</p>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
