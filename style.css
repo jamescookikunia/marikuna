@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+ 
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:pink;
+}
+
+/* CARD */
+.card{
+    background:white;
+    padding:50px;
+    border-radius:30px;
+    text-align:center;
+    width:420px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* TITLE */
+h1{
+    color:#ff4e88;
+    margin-bottom:15px;
+    font-size:40px;
+}
+
+p{
+    color:#666;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+/* HEART CONTAINER */
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:20px;
+}
+
+/* HEART BASE */
+.heart-btn{
+    width:90px;
+    height:90px;
+    border:none;
+    position:relative;
+    transform:rotate(-45deg);
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* HEART SHAPE PARTS */
+.heart-btn:before,
+.heart-btn:after{
+    content:"";
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    position:absolute;
+}
+
+.heart-btn:before{
+    top:-45px;
+    left:0;
+}
+
+.heart-btn:after{
+    left:45px;
+    top:0;
+}
+
+/* COLORS */
+.heart1,
+.heart1:before,
+.heart1:after{
+    background:#ff2b2b; /* RED */
+}
+
+.heart2,
+.heart2:before,
+.heart2:after{
+    background:#2ecc71; /* GREEN */
+}
+
+.heart3,
+.heart3:before,
+.heart3:after{
+    background:#9b59b6; /* PURPLE */
+}
+
+/* HOVER EFFECT */
+.heart-btn:hover{
+    transform:rotate(-45deg) scale(1.1);
+}
+
+/* MESSAGE */
+.message{
+    margin-top:35px;
+    font-size:26px;
+    color:#ff2e6f;
+    font-weight:bold;
+    min-height:40px;
+    animation:fade 0.4s;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:scale(0.8);}
+    to{opacity:1; transform:scale(1);}
+}
+
+/* BACK BUTTON */
+.back-btn{
+    margin-top:25px;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#ff4e88;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    transform:scale(1.1);
+    background:#ff2e6f;
+}
